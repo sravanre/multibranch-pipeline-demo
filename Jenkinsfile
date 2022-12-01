@@ -46,6 +46,7 @@ pipeline {
             steps {
                 sh """
                 echo "Running Code Analysis"
+                echo "runnign the sonarqube"
                 """
             }
         }
