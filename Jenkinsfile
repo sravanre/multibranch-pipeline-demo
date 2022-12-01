@@ -1,10 +1,6 @@
 pipeline {
 
-    agent {
-        node {
-            label 'master'
-        }
-    }
+    agent any
 
     options {
         buildDiscarder logRotator( 
@@ -46,6 +42,7 @@ pipeline {
             steps {
                 sh """
                 echo "Running Code Analysis"
+                echo "runnign the sonarqube"
                 """
             }
         }
