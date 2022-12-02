@@ -1,10 +1,6 @@
 pipeline {
 
-    agent {
-        node {
-            label 'master'
-        }
-    }
+    agent any
 
     options {
         buildDiscarder logRotator( 
@@ -46,6 +42,15 @@ pipeline {
             steps {
                 sh """
                 echo "Running Code Analysis"
+                """
+            }
+        }
+
+        stage('Securtiy Code Analysis') {
+            steps {
+                sh """
+                echo "running security code check"
+                sleep 10 
                 """
             }
         }
