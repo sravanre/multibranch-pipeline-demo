@@ -65,7 +65,8 @@ pipeline {
                 """
 
                 sh """
-                echo "Deploying Code"
+                echo "Deploying Code "
+                echo "Deploying the code the kuberentes environment"
                 """
             }
         }
